@@ -43,6 +43,7 @@ class Point implements IPoint{
     readonly y: number;
 }
 
+
 Startup.main();
 
 
