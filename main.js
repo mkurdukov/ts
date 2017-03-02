@@ -18,6 +18,7 @@ var Startup = (function () {
             result += '( ' + p.email + ' )';
         if (p.userName)
             result += ' with username:' + p.userName;
+//Test
         console.log(result);
     };
     return Startup;
