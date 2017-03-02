@@ -40,7 +40,7 @@ interface IPoint{
 
 class Point implements IPoint{
     readonly x: number;
-    readonly y1: number;
+    readonly y: number;
 }
 
 Startup.main();
