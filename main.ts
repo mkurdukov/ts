@@ -21,8 +21,6 @@ Startup.create(fullP);
 
         if(p.userName)
             result += ' with username:' + p.userName;
-
-            //Test 
             
         console.log(result);
     } 
