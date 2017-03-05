@@ -1,26 +1,17 @@
 import Main from "../src/main";
 import "mocha";
-
+import { expect, assert } from 'chai';
+//import chai = require('chai');
 
 import { suite, test, slow, timeout, skip, only } from "mocha-typescript";
  
 @suite 
-class Hello {
-    @test 
-    TestRun() {
-        let m = new Main();
-        m.run();
-        
-    }
+class TestFromSite {
 
-
-    @test("should fail when asserts are broken")
-    asserts_fail() {
-        // Any self-respecting assertion framework should throw
-        var error = new Error("Assert failed");
-        (<any>error).expected = "expected";
-        (<any>error).actual = "to fail";
-        throw error;
+    @test
+    assert_equals() {
+        //expect(1*1).to.be.equal(1);
+        assert.equal('bar', 'foo equal `bar`');
     }
     
     @test("should pass async tests")

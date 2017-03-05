@@ -9,20 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const main_1 = require("../src/main");
 require("mocha");
+const chai_1 = require("chai");
+//import chai = require('chai');
 const mocha_typescript_1 = require("mocha-typescript");
-let Hello = class Hello {
-    TestRun() {
-        let m = new main_1.default();
-        m.run();
-    }
-    asserts_fail() {
-        // Any self-respecting assertion framework should throw
-        var error = new Error("Assert failed");
-        error.expected = "expected";
-        error.actual = "to fail";
-        throw error;
+let TestFromSite = class TestFromSite {
+    assert_equals() {
+        //expect(1*1).to.be.equal(1);
+        chai_1.assert.equal('bar', 'foo equal `bar`');
     }
     assert_pass_async(done) {
         setTimeout(() => done(), 1);
@@ -49,45 +43,39 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
-], Hello.prototype, "TestRun", null);
-__decorate([
-    mocha_typescript_1.test("should fail when asserts are broken"),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
-], Hello.prototype, "asserts_fail", null);
+], TestFromSite.prototype, "assert_equals", null);
 __decorate([
     mocha_typescript_1.test("should pass async tests"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Function]),
     __metadata("design:returntype", void 0)
-], Hello.prototype, "assert_pass_async", null);
+], TestFromSite.prototype, "assert_pass_async", null);
 __decorate([
     mocha_typescript_1.test("should fail async when given error"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Function]),
     __metadata("design:returntype", void 0)
-], Hello.prototype, "assert_fail_async", null);
+], TestFromSite.prototype, "assert_fail_async", null);
 __decorate([
     mocha_typescript_1.test("should fail async when callback not called"),
     mocha_typescript_1.timeout(100),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Function]),
     __metadata("design:returntype", void 0)
-], Hello.prototype, "assert_fail_async_no_callback", null);
+], TestFromSite.prototype, "assert_fail_async_no_callback", null);
 __decorate([
     mocha_typescript_1.test("should pass when promise resolved"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
-], Hello.prototype, "promise_pass_resolved", null);
+], TestFromSite.prototype, "promise_pass_resolved", null);
 __decorate([
     mocha_typescript_1.test("should fail when promise rejected"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
-], Hello.prototype, "promise_fail_rejected", null);
-Hello = __decorate([
+], TestFromSite.prototype, "promise_fail_rejected", null);
+TestFromSite = __decorate([
     mocha_typescript_1.suite
-], Hello);
+], TestFromSite);
 //# sourceMappingURL=main.test.js.map
