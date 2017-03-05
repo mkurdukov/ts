@@ -1,6 +1,18 @@
 {
     "compilerOptions": {
-        "target": "ES5",
-        "sourceMap": true
+        "sourceMap": true,
+        "baseUrl": ".",
+        "noEmit": false,
+        "declaration": false,
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "target": "es6",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "jsx": "react",
+        "removeComments": false,
+        "noLib": false,
+        "preserveConstEnums": false,
+        "suppressImplicitAnyIndexErrors": true
     }
 }

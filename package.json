@@ -1,0 +1,6 @@
+ {
+  "scripts": {
+    "test": "tsc -p . && mocha",
+    "prepublish": "tsc -p ."
+  }
+  }
