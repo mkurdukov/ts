@@ -1,4 +1,6 @@
 import EmailValidator from "../src/Validation/EmailValidator";
+import { CompareValidator, CompareRule }  from "../src/Validation/CompareValidator";
+
 import "mocha";
 import { expect, assert } from 'chai';
 
@@ -21,7 +23,9 @@ import { suite, test, slow, timeout, skip, only } from "mocha-typescript";
 
      @test("Should Validate two integer values")
      shouldValidate2IntValues(){
-         
+         let validator: CompareValidator;
+         validator = new CompareValidator(1, CompareRule.GreaterThan);
+         assert.isTrue(validator.isValid(5));
      }
 
  }
