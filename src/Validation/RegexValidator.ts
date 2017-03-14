@@ -1,18 +1,15 @@
 import IValidator from "./IValidator"
 
 export abstract class RegexValidator implements IValidator {
-    
-    isValid(value: any): boolean {
-        if(!value)
-            return false;
-        return this.regExpression.test(value.toString());
+    constructor(protected value: string, protected expression: RegExp){
     }
 
-    regExpression: RegExp;
-    
-    constructor(expression: RegExp){
-        this.regExpression = expression;
+        isValid(): boolean {
+        if(!this.value)
+            return false;
+        return this.expression.test(this.value);
     }
+
 }
 
 export default RegexValidator;

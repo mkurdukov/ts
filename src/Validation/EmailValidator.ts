@@ -1,8 +1,8 @@
 import RegexValidator from "./RegexValidator"
 
 class EmailValidator extends RegexValidator {
-    constructor(){
-        super(new RegExp(/.+@.+/))
+    constructor(value: string){
+        super(value, new RegExp(/.+@.+/))
     }
 }
 

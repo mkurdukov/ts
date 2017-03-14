@@ -1,5 +1,5 @@
 interface IValidator{
-    isValid(value: any): boolean;
+    isValid(): boolean;
 }
 
 export default IValidator

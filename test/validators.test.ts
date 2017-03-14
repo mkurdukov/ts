@@ -11,21 +11,19 @@ import { suite, test, slow, timeout, skip, only } from "mocha-typescript";
 
     @test("Should Validate list of emails")
      validateEmail(){
-        let validator = new EmailValidator();
         ["first@second.com", "max@tula.co", "max@kur", "mdm@ddff.ri"].forEach(email => {
-            assert.isTrue(validator.isValid(email));    
+            assert.isTrue(new EmailValidator(email).isValid());
         });
        
         ["firstsecond.com", "maxtula.co", "maxkur", "mdmddff.ri"].forEach(email => {
-            assert.isFalse(validator.isValid(email));    
+            assert.isFalse(new EmailValidator(email).isValid());    
         });
      }
 
      @test("Should Validate two integer values")
      shouldValidate2IntValues(){
          let validator: CompareValidator;
-         validator = new CompareValidator(1, CompareRule.GreaterThan);
-         assert.isTrue(validator.isValid(5));
+         validator = new CompareValidator(5, 1, CompareRule.GreaterThan);
+         assert.isTrue(validator.isValid());
      }
-
  }
