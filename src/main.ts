@@ -1,7 +1,5 @@
-class Main{
-    public run(){
-        console.log("I am running");
-    }
-}
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-export default Main
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
