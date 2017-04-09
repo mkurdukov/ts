@@ -20,6 +20,7 @@
     "test:once": "karma start karma.conf.js --single-run",
     "lint": "tslint ./src/**/*.ts -t verbose"
   },
+  
   "keywords": [],
   "author": "",
   "license": "MIT",
